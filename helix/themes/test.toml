@@ -1,0 +1,6 @@
+inherits = "github_dark"
+
+"ui.background" = {}
+"string" = "scale.yellow.1"
+"ui.selection.primary" = { bg = "scale.gray.6" }
+# "ui.selection.primary" = { modifiers = ["reversed"] }
