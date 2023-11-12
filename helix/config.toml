@@ -1,1 +1,49 @@
-/home/psyvern/.config/helix/config.toml
+theme = "test"
+
+[editor]
+color-modes = true
+true-color = true
+bufferline = "multiple"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+# character = "╎"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "file-name",
+]
+right = [
+  "diagnostics",
+  "selections",
+  "file-type",
+  "position",
+  "position-percentage",
+  "file-encoding",
+]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+separator = ""
+
+[keys.insert]
+C-backspace = "delete_word_backward"
+C-del = "delete_word_forward"
+S-tab = "unindent"
+C-space = "completion"
+A-ret = "code_action"
+C-left = [ "move_prev_word_start" ]
+C-right = [ "move_next_word_end", "move_char_right" ]

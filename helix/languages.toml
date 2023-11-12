@@ -1,1 +1,46 @@
-/home/psyvern/.config/helix/languages.toml
+[[language]]
+name = "astral"
+scope = "source.astral"
+injection-regex = "astral"
+file-types = ["star"]
+roots = []
+comment-token = "//"
+indent = { tab-width = 4, unit = "    " }
+
+[[grammar]]
+name = "astral"
+source = { path = "/home/psyvern/github/tree-sitter-astral/" }
+
+#language-server = { command = "mylang-lsp", args = ["--stdio"], environment = { "ENV1" = "value1", "ENV2" = "value2" } }
+#formatter = { command = "mylang-formatter" , args = ["--stdin"] }
+
+
+[[language]]
+name = "typst"
+scope = "source.typst"
+injection-regex = "^typ(st)?$"
+file-types = ["typ"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "typst-lsp" ]
+roots = ["typst.toml"]
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'$' = '$'
+
+[language-server.typst-lsp]
+command = "typst-lsp"
+
+[[grammar]]
+name = "typst"
+source = { git = "https://github.com/frozolotl/tree-sitter-typst", rev = "bb59b2b737a35e5ddae67be8e8275633648d758f" }
+
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
